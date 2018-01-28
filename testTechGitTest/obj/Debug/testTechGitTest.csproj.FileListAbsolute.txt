@@ -1,0 +1,16 @@
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\testTechGitTest.dll
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\testTechGitTest.pdb
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\testTechGit.exe
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\testTechGit.pdb
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\testTechGit.exe.config
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\obj\Debug\testTechGitTest.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\obj\Debug\testTechGitTest.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\obj\Debug\testTechGitTest.dll
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\obj\Debug\testTechGitTest.pdb

@@ -1,0 +1,7 @@
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGit\bin\Debug\testTechGit.exe.config
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGit\bin\Debug\testTechGit.exe
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGit\bin\Debug\testTechGit.pdb
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGit\obj\Debug\testTechGit.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGit\obj\Debug\testTechGit.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGit\obj\Debug\testTechGit.exe
+C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGit\obj\Debug\testTechGit.pdb
