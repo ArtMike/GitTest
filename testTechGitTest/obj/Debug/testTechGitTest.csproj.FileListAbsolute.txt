@@ -14,3 +14,19 @@ C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\
 C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\obj\Debug\testTechGitTest.csproj.CoreCompileInputs.cache
 C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\obj\Debug\testTechGitTest.dll
 C:\Users\Mike\Documents\Visual Studio 2017\Projects\testTechGit\testTechGitTest\obj\Debug\testTechGitTest.pdb
+E:\GIttest\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\GIttest\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\GIttest\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\GIttest\testTechGitTest\bin\Debug\testTechGitTest.dll
+E:\GIttest\testTechGitTest\bin\Debug\testTechGitTest.pdb
+E:\GIttest\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\GIttest\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\GIttest\testTechGitTest\bin\Debug\testTechGit.exe
+E:\GIttest\testTechGitTest\bin\Debug\testTechGit.pdb
+E:\GIttest\testTechGitTest\bin\Debug\testTechGit.exe.config
+E:\GIttest\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\GIttest\testTechGitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\GIttest\testTechGitTest\obj\Debug\testTechGitTest.csprojResolveAssemblyReference.cache
+E:\GIttest\testTechGitTest\obj\Debug\testTechGitTest.csproj.CoreCompileInputs.cache
+E:\GIttest\testTechGitTest\obj\Debug\testTechGitTest.dll
+E:\GIttest\testTechGitTest\obj\Debug\testTechGitTest.pdb
