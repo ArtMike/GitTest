@@ -2,7 +2,10 @@ namespace testTechGit
 {
     public class Position
     {
-        public Position()
+        private const int DefaultRoverPositionX = 1;
+        private const int DefaultRoverPositionY = 1;
+
+        public Position() : this(DefaultRoverPositionX, DefaultRoverPositionY)
         {
         }
 
