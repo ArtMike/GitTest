@@ -12,13 +12,23 @@ namespace testTechGit
         {
             var rover = new Rover();
             string command = null;
-            while (command  != "Exit")
+            var index = 0;
+            while (command != "Exit")
             {
                 try
                 {
-                    command = Console.ReadLine();
+                    if (!string.IsNullOrEmpty(args?.ToArray()[index]))
+                    {
+                        command = args.ToArray()[index];
+                        index++;
+                    }
+                    else
+                    {
+                        command = Console.ReadLine();
+                    }
                     rover.Execute(command);
                     Console.WriteLine(rover);
+                 
                 }
                 catch (Exception exception)
                 {

@@ -13,12 +13,12 @@ namespace testTechGitTest
     [TestClass]
     public class ProgramTest
     {
-        TextWriter m_normalOutput;
-        StringWriter m_testingConsole;
-        StringBuilder m_testingSB;
+         TextWriter m_normalOutput;
+         StringWriter m_testingConsole;
+         StringBuilder m_testingSB;
 
-        [TestInitialize]
-        public void TestFixtureSetUp()
+        [ClassInitialize]
+        public static void TestFixtureSetUp(TestContext context)
         {
             // Set current folder to testing folder
             string assemblyCodeBase =
@@ -35,13 +35,35 @@ namespace testTechGitTest
             Environment.CurrentDirectory = dirName;
 
             // Initialize string builder to replace console
-            m_testingSB = new StringBuilder();
-            m_testingConsole = new StringWriter(m_testingSB);
+            var programTest = new ProgramTest();
+            programTest.m_testingSB = new StringBuilder();
+            programTest.m_testingConsole = new StringWriter(programTest.m_testingSB);
 
             // swap normal output console with testing console - to reuse 
             // it later
-            m_normalOutput = System.Console.Out;
-            System.Console.SetOut(m_testingConsole);
+            programTest.m_normalOutput = System.Console.Out;
+            System.Console.SetOut(programTest.m_testingConsole);
+        }
+        [ClassCleanup]
+        public static void TestFixtureTearDown()
+        {
+            var programTest = new ProgramTest();
+            // set normal output stream to the console
+            System.Console.SetOut(programTest.m_normalOutput);
+        }
+
+        [TestInitialize]
+        public void SetUp()
+        {
+            // clear string builder
+            m_testingSB.Remove(0, m_testingSB.Length);
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            // Verbose output in console
+            m_normalOutput.Write(m_testingSB.ToString());
         }
 
         private int StartConsoleApplication(string arguments)
@@ -70,7 +92,7 @@ namespace testTechGitTest
 
             // start and wait for exit
             proc.Start();
-            Console.WriteLine("Exit");
+            //Console.WriteLine("Exit");
             proc.WaitForExit();
 
             // get output to testing console.
@@ -85,32 +107,14 @@ namespace testTechGitTest
         public void ShowCmdHelpIfNoArguments()
         {
             // Check exit is normal
-            Assert.AreEqual(0, StartConsoleApplication("Exit"));
+            Assert.AreEqual(0, StartConsoleApplication("R Exit"));
 
             // Check that help information shown correctly.
             Assert.IsTrue(m_testingSB.ToString().Contains(
                 ""));
         }
-        //[TestFixtureTearDown]
-        //public void TestFixtureTearDown()
-        //{
-        //    // set normal output stream to the console
-        //    System.Console.SetOut(m_normalOutput);
-        //}
 
-        //[SetUp]
-        //public void SetUp()
-        //{
-        //    // clear string builder
-        //    m_testingSB.Remove(0, m_testingSB.Length);
-        //}
-
-        //[TearDown]
-        //public void TearDown()
-        //{
-        //    // Verbose output in console
-        //    m_normalOutput.Write(m_testingSB.ToString());
-        //}
+       
     }
     
 }
