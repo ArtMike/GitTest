@@ -6,10 +6,12 @@ namespace testTechGit
 {
     public class Rover
     {
+        private const RoverFacing RoverDefaultFacing = RoverFacing.North;
+
         public Rover()
         {
-            RoverPosition = new Position(1, 1);
-            RoverFacing = RoverFacing.North;
+            RoverPosition = new Position();
+            RoverFacing = RoverDefaultFacing;
             Commands = new Dictionary<string, ICommand>
             {
                 { "R", new RotateRoverRightCommand(this) },
@@ -21,37 +23,6 @@ namespace testTechGit
         {
             RoverPosition = roverPosition;
             RoverFacing = roverFacing;
-        }
-
-        public static void Main()
-        {
-            //var roverPositionX = 0;
-            //var roverPositionY = 0;
-            //var roverFacing = RoverFacing.North;
-            var rover = new Rover();
-
-            while (true)
-            {
-                var command = Console.ReadLine();
-                if (command != "L" && command != "R" && command != "F")
-                    throw new Exception("invalid command");
-                rover.Execute(command);
-
-                //switch (command)
-                //{
-                //    case "L":
-                //        rover.RotateLeft();
-                //        break;
-                //    case "R":
-                //        rover.RotateRight();
-                //        break;
-                //    case "F":
-                //        rover.MoveForward();
-                //        break;
-                //    default:
-                //        throw new Exception("invalid command");
-                //}
-            }
         }
 
         public RoverFacing RoverFacing { get; private set; }
@@ -87,6 +58,8 @@ namespace testTechGit
                 case RoverFacing.West:
                     RoverPosition.MoveRoverBack(RoverPosition);
                     break;
+                default:
+                    throw new ArgumentException("Invalid Rover Facing");
             }
             Console.WriteLine($"Rover is now at {RoverPosition.RoverPositionX}, {RoverPosition.RoverPositionY} - facing {RoverFacing}");
 
@@ -116,6 +89,11 @@ namespace testTechGit
                 return false;
 
             return true;
+        }
+
+        public override string ToString()
+        {
+            return $"Rover is now at {RoverPosition.RoverPositionX}, {RoverPosition.RoverPositionY} - facing {RoverFacing}";
         }
     }
 }

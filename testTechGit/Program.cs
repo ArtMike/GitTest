@@ -6,10 +6,26 @@ using System.Threading.Tasks;
 
 namespace testTechGit
 {
-    class Program
+    public class Program
     {
-        //static void Main(string[] args)
-        //{
-        //}
+        public static void Main(string[] args)
+        {
+            var rover = new Rover();
+            string command = null;
+            while (command  != "Exit")
+            {
+                try
+                {
+                    command = Console.ReadLine();
+                    rover.Execute(command);
+                    Console.WriteLine(rover);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+            }
+        }
     }
 }
+
