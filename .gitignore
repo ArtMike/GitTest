@@ -1,5 +1,5 @@
 .vs\*
 testTechGitTest\bin\*
 testTechGitTest\obj\*
-\testTechGit\bin\*
-\testTechGit\obj\*
+testTechGit\bin\*
+testTechGit\obj\*
