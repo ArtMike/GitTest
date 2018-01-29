@@ -50,6 +50,7 @@
     <Compile Include="MoveRoverForwardCommand.cs" />
     <Compile Include="RotateRoverRightCommand.cs" />
     <Compile Include="Rover.cs" />
+    <Compile Include="RoverCommand.cs" />
     <Compile Include="RoverFacing.cs" />
   </ItemGroup>
   <ItemGroup>

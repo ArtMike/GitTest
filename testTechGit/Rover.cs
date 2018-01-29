@@ -14,9 +14,9 @@ namespace testTechGit
             RoverFacing = RoverDefaultFacing;
             Commands = new Dictionary<string, ICommand>
             {
-                { "R", new RotateRoverRightCommand(this) },
-                { "L", new RotateRoverLeftCommand(this) },
-                { "F", new MoveRoverForwardCommand(this) }
+                { RoverCommand.R.ToString(), new RotateRoverRightCommand(this) },
+                { RoverCommand.L.ToString(), new RotateRoverLeftCommand(this) },
+                { RoverCommand.F.ToString(), new MoveRoverForwardCommand(this) }
             };
         }
         public Rover(RoverFacing roverFacing, Position roverPosition) : this()
@@ -32,14 +32,11 @@ namespace testTechGit
         public void RotateRight()
         {
             RoverFacing = RoverFacing == RoverFacing.West ? RoverFacing.North : (RoverFacing)((int)RoverFacing + 1);
-            //Console.WriteLine($"Rover is now at {RoverPosition.RoverPositionX}, {RoverPosition.RoverPositionY} - facing {RoverFacing}");
         }
 
         public void RotateLeft()
         {
             RoverFacing = RoverFacing == RoverFacing.North ? RoverFacing.West : (RoverFacing)((int)RoverFacing - 1);
-            //Console.WriteLine($"Rover is now at {RoverPosition.RoverPositionX}, {RoverPosition.RoverPositionY} - facing {RoverFacing}");
-
         }
 
         public void MoveForward()
@@ -61,8 +58,6 @@ namespace testTechGit
                 default:
                     throw new ArgumentException("Invalid Rover Facing");
             }
-            //Console.WriteLine($"Rover is now at {RoverPosition.RoverPositionX}, {RoverPosition.RoverPositionY} - facing {RoverFacing}");
-
         }
 
         public void Execute(string command)
@@ -94,6 +89,15 @@ namespace testTechGit
         public override string ToString()
         {
             return $"Rover is now at {RoverPosition.RoverPositionX}, {RoverPosition.RoverPositionY} - facing {RoverFacing}";
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 1494645696;
+            hashCode = hashCode * -1521134295 + RoverFacing.GetHashCode();
+            hashCode = hashCode * -1521134295 + EqualityComparer<Position>.Default.GetHashCode(RoverPosition);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Dictionary<string, ICommand>>.Default.GetHashCode(Commands);
+            return hashCode;
         }
     }
 }

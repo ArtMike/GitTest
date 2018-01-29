@@ -4,6 +4,10 @@ namespace testTechGit
     {
         private const int DefaultRoverPositionX = 1;
         private const int DefaultRoverPositionY = 1;
+        private const int DefaultLeftLimit = 0;
+        private const int DefaultRightLimit = 4;
+        private const int DefaultTopLimit = 0;
+        private const int DefaultBottomLimit = 4;
 
         public Position() : this(DefaultRoverPositionX, DefaultRoverPositionY)
         {
@@ -20,22 +24,22 @@ namespace testTechGit
 
         public void MoveRoverDown(Position position)
         {
-            RoverPositionX = position.RoverPositionX < 4 ? ++position.RoverPositionX : position.RoverPositionX;
+            RoverPositionX = position.RoverPositionX < DefaultBottomLimit ? ++position.RoverPositionX : position.RoverPositionX;
         }
 
         public void MoveRoverUp(Position position)
         {
-            RoverPositionX = position.RoverPositionX != 0 ? --position.RoverPositionX : position.RoverPositionX;
+            RoverPositionX = position.RoverPositionX != DefaultTopLimit ? --position.RoverPositionX : position.RoverPositionX;
         }
 
         public void MoveRoverForward(Position position)
         {
-            RoverPositionY = position.RoverPositionY < 4 ? ++position.RoverPositionY : position.RoverPositionY;
+            RoverPositionY = position.RoverPositionY < DefaultRightLimit ? ++position.RoverPositionY : position.RoverPositionY;
         }
 
         public void MoveRoverBack(Position position)
         {
-            RoverPositionY = position.RoverPositionY > 0 ? --position.RoverPositionY : position.RoverPositionY;
+            RoverPositionY = position.RoverPositionY > DefaultLeftLimit ? --position.RoverPositionY : position.RoverPositionY;
         }
 
         public override bool Equals(object obj)
@@ -49,6 +53,14 @@ namespace testTechGit
                 return false;
 
             return true;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -1297045493;
+            hashCode = hashCode * -1521134295 + RoverPositionX.GetHashCode();
+            hashCode = hashCode * -1521134295 + RoverPositionY.GetHashCode();
+            return hashCode;
         }
     }
 }

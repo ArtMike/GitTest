@@ -473,27 +473,5 @@ namespace testTechGitTest
             // Assert
             Assert.AreEqual(result, "Rover is now at 1, 2 - facing East");
         }
-
-        //[DataTestMethod]
-        //[DataRow("R", RoverFacing.East, 1, 1)]
-        //[DataRow("RR", RoverFacing.South, 1, 1)]
-        //[DataRow("RRR", RoverFacing.West, 1, 1)]
-        //[DataRow("RRRR", RoverFacing.North, 1, 1)]
-        //public void Execute_command_right(string commands, RoverFacing expectedRoverFacing, int expectedRoverPositionX, int expectedRroverPositionY)
-        //{
-        //    // Arrange
-        //    //var expectedRover = new Rover(expectedRoverFacing, new Position(expectedRoverPositionX, expectedRroverPositionY));
-        //    //var program = new Program();
-        //    Program.Main(new[]{"R"});
-        //    Environment.Exit(0);
-        //    // Act
-        //    //foreach (var command in commands.ToCharArray())
-        //    //{
-        //    //    _rover.Execute(command.ToString());
-        //    //}
-
-        //    // Assert
-        //    Assert.AreEqual(_rover.ToString(), _rover.ToString());
-        //}
     }
 }
