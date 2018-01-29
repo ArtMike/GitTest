@@ -9,6 +9,7 @@ namespace testTechGit
         public Rover()
         {
             RoverPosition = new Position(1, 1);
+            RoverFacing = RoverFacing.North;
             Commands = new Dictionary<string, ICommand>
             {
                 { "R", new RotateRoverRightCommand(this) },
