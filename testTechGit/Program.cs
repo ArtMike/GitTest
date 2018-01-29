@@ -8,16 +8,18 @@ namespace testTechGit
 {
     public class Program
     {
+        public const string ExitCommandConst = "Exit";
+
         public static void Main(string[] args)
         {
             var rover = new Rover();
             string command = null;
             var index = 0;
-            while (command != "Exit")
+            while (true)
             {
                 try
                 {
-                    if (!string.IsNullOrEmpty(args?.ToArray()[index]))
+                    if (args.Length > 0 )
                     {
                         command = args.ToArray()[index];
                         index++;
@@ -26,6 +28,8 @@ namespace testTechGit
                     {
                         command = Console.ReadLine();
                     }
+                    if(command == ExitCommandConst)
+                        break;
                     rover.Execute(command);
                     Console.WriteLine(rover);
                  
